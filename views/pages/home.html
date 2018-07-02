@@ -1,3 +1,12 @@
 {{ define "page" }}
-<h1>Home</h1>
+<div>
+    {{ range . }}
+    <div>
+        <h3>{{ .Title }}</h3> 
+        <p>{{ .Content }} </p>
+    </div>
+    {{ else }}
+    <p>No article found</p>
+    {{ end }}
+</div>
 {{ end }}
