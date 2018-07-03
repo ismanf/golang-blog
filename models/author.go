@@ -7,17 +7,13 @@ import (
 )
 
 type (
-	Credentials struct {
-		Login    string `bson:"login" json:"login"`
-		Password string `bson:"string" json:"string"`
-	}
-
 	Author struct {
-		Credentials
 		ID        bson.ObjectId `bson:"_id" json:"id"`
 		FirstName string        `bson:"firstName" json:"firstName"`
 		LastName  string        `bson:"lastName" json:"lastName"`
 		Email     string        `bson:"email" json:"email"`
+		Login     string        `bson:"login" json:"login"`
+		Password  string        `bson:"string" json:"string"`
 	}
 
 	Authors []Author

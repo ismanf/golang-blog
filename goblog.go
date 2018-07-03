@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/ismayilmalik/golang-blog/infrastructure/cache"
 	"log"
 	"net/http"
 
@@ -28,6 +29,9 @@ func (a *GoBlogApp) Initialize() {
 
 	//Initializing routes
 	a.router = routes.Routers()
+
+	//Initialize cache
+	cache.Initialize()
 
 	//Initialize view engine
 	veng.Initialize(nil)
